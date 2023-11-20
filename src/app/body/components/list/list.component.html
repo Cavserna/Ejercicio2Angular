@@ -1,0 +1,12 @@
+
+<mat-list>
+    <mat-list-item *ngFor="let personaje of personajes.results" (click)="openDialog(personaje)">
+        <img matListItemAvatar [src]="personaje.image">
+        <div>
+            {{personaje.name}} 
+        </div>
+        <div>
+            Estado: {{personaje.status}} - Especie: {{personaje.species}}
+        </div> 
+    </mat-list-item>
+</mat-list>
