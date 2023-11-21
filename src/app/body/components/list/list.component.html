@@ -1,12 +1,24 @@
 
 <mat-list>
-    <mat-list-item *ngFor="let personaje of personajes.results" (click)="openDialog(personaje)">
+    <mat-list-item *ngFor="let personaje of personajes.results">
         <img matListItemAvatar [src]="personaje.image">
-        <div>
-            {{personaje.name}} 
+        <span matListItemTitle>{{personaje.name}} </span>
+        <span matListItemLine>Estado: {{personaje.status}}</span>
+        <span matListItemLine>Especie: {{personaje.species}}</span>
+        
+        <div class="botonDetalles">
+            <button mat-raised-button color="accent" (click)="openDialog(personaje)">Detalles</button>
         </div>
         <div>
-            Estado: {{personaje.status}} - Especie: {{personaje.species}}
-        </div> 
+            <mat-divider></mat-divider>
+        </div>
+        
     </mat-list-item>
+    
 </mat-list>
+
+
+
+
+
+

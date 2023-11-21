@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {MatListModule} from '@angular/material/list';
 import {MatDialogModule} from '@angular/material/dialog';
+import {MatButtonModule} from '@angular/material/button';
+import {MatDividerModule} from '@angular/material/divider';
 
 
 
@@ -12,11 +14,15 @@ import {MatDialogModule} from '@angular/material/dialog';
   imports: [
     CommonModule,
     MatListModule,
-    MatDialogModule
+    MatDialogModule,
+    MatButtonModule,
+    MatDividerModule
   ],
   exports: [
     MatListModule,
-    MatDialogModule
+    MatDialogModule,
+    MatButtonModule,
+    MatDividerModule
   ]
 })
 export class MaterialModule { }
